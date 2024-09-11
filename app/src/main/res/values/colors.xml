@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!--    Paleta de Colores:-->
+    <!--    Rojo: #d0302a-->
+    <!--    Amarillo: #eccb6c-->
+    <!--    Cafe: #875639-->
+    <!--    Naranja: #e0782f-->
+    <!--    Naranja Fuerte: #da5e2b-->
+
+
+    <!-- Primary Color (Main Theme) -->
+    <color name="tomatoRed">#d0302a</color> <!-- Vibrant and Appetite-Stimulating -->
+</resources>

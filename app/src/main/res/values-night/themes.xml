@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.HeroesApp" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your dark theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+
+        <!-- Color de Fondo de la Actividad -->
+        <item name="android:colorBackground">@color/black</item>
+        <!-- Color de Texto por Defecto -->
+        <item name="android:textColor">@color/white</item>
+
+        <item name="colorPrimary">@color/tomatoRed</item>
+    </style>
+</resources>

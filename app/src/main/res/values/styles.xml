@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="CustomEditTextStyle">
+        <item name="android:background">@drawable/edit_text_background</item>
+        <item name="android:textColor">@android:color/white</item> <!-- Color de texto blanco -->
+        <item name="android:textSize">16sp</item> <!-- Tamaño de texto -->
+        <item name="android:textStyle">bold</item> <!-- Texto en negrita -->
+        <item name="android:padding">10dp</item> <!-- Espaciado interior -->
+        <item name="android:textColorHint">@android:color/white</item>
+        <item name="android:cursorVisible">true</item> <!-- Hace visible el cursor -->
+        <item name="android:focusable">true</item> <!-- Permite enfocar -->
+        <item name="android:singleLine">true</item> <!-- Línea única sin bordes -->
+    </style>
+
+    <!-- Estilo para la imagen con bordes redondeados -->
+    <style name="RoundedCornerImage">
+        <item name="cornerFamily">rounded</item> <!-- Tipo de esquina: redondeada -->
+        <item name="cornerSize">120dp</item> <!-- Tamaño del radio de las esquinas -->
+    </style>
+</resources>

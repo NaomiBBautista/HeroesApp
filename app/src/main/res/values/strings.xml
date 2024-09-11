@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">HeroesApp</string>
+    <string name="email_hint">Correo Electronico</string>
+    <string name="password_hint">Contraseña</string>
+    <string name="loginBtn_text">Iniciar Sesión</string>
+    <string name="login_fondo">LOGIN_FONDO</string>
+    <string name="username">Hola, Heroe</string>
+    <string name="titlePublisher"> Selecciona tu Universo:</string>
+    <string name="titlePersonajes">Personajes</string>
+</resources>
