@@ -21,6 +21,7 @@ import com.example.heroesapp.models.Publisher
 class HeroesActivity : AppCompatActivity() {
     lateinit var  logoutBtn : ImageView
     lateinit var heroename : TextView
+    lateinit var heroeTitle : TextView
     lateinit var  heroeRecyclerView : RecyclerView
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,9 +29,20 @@ class HeroesActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_heroes)
 
-        //
+        // Recuperar el nombre del usuario
+        val userName = intent.getStringExtra("userName")
+        heroeTitle = findViewById(R.id.titleHeroe)
+        Log.i("HeroesActivity","Nombre del usuario: $userName")
+        heroename = findViewById(R.id.username)
+        heroename.text = userName
+
+        // Obtener el id del publisher
         val publisherId = intent.getIntExtra("publisherId", 0)
+
+        // Pasar y recuperar información de un objeto
         Log.i("PublisherActivity", "El Id es ${publisherId.toString()}")
+        val publisher = Publisher.publishers.firstOrNull { it.id == publisherId }
+        Log.i("El Publisher", publisher.toString())
 
         // Cargar la vista
         heroeRecyclerView = findViewById(R.id.heroe_recyclerView)

@@ -4,7 +4,7 @@ data class Heroe(val id: Int,val name:String,val image:String){
     companion object{
         val heroes = mutableListOf<Heroe>(
             // Heroes de Marvel
-            Heroe(1,"Iron-Man"," https://i.pinimg.com/736x/d1/49/96/d1499689e2b18f1b895368c5b5dee8e2.jpg"),
+            Heroe(1,"Iron-Man","https://i.pinimg.com/736x/d1/49/96/d1499689e2b18f1b895368c5b5dee8e2.jpg"),
             Heroe(2, "Spider-Man", "https://i.pinimg.com/736x/01/3f/af/013faf3180fe9deb3a61391e49f8c394.jpg"),
             Heroe(3,"Capitán América","https://i.pinimg.com/736x/d9/33/2b/d9332bc530ee6ad391992df190fa9b2b.jpg"),
             Heroe(4, "DeadPool", "https://i.pinimg.com/736x/ce/ef/94/ceef9458d1fc37f91a20a477d3866a28.jpg"),

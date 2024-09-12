@@ -15,10 +15,11 @@ import com.example.heroesapp.MainActivity
 import com.example.heroesapp.R
 import com.example.heroesapp.adapters.PublisherAdapter
 import com.example.heroesapp.models.Publisher
+import com.example.heroesapp.models.User
 
 class PublisherActivity : AppCompatActivity() {
 
-    //lateinit var username : TextView
+    lateinit var username : TextView
     lateinit var  logoutBtn : ImageView
     lateinit var  publisherRecyclerView : RecyclerView
 
@@ -30,16 +31,26 @@ class PublisherActivity : AppCompatActivity() {
         // Prefencias de Login
         val sharedPreferences = getSharedPreferences("mypref", MODE_PRIVATE)
 
-        // Buscar elemtos por ID
-        // username = findViewById(R.id.username)
+        // Trear los datos del usario desde el MainActivity
+        val userEmail = intent.getStringExtra("userEmail")
+        val user = User.staticUsers.firstOrNull{ user ->  user.email == userEmail}
+        val userName = user?.name
+
+        // Buscar elementos por ID
+        username = findViewById(R.id.username)
         logoutBtn = findViewById(R.id.logoutBtn)
         publisherRecyclerView = findViewById(R.id.publisher_recyclerView)
+
+        // Mandar el nombre del Usuario
+        username.text = user?.name
+
 
         // Conectar el adaptador
         publisherRecyclerView.adapter = PublisherAdapter(Publisher.publishers){ publisher ->
             Log.i("PublisherActivity", publisher.name)
             val intent = Intent(this@PublisherActivity, HeroesActivity::class.java).apply {
-                putExtra("PublisherId", publisher.id)
+                putExtra("publisherId", publisher.id)
+                putExtra("userName", userName)
             }
             startActivity(intent)
         }

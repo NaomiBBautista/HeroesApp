@@ -20,6 +20,6 @@
 
     <style name="RoundedCornerImageHeroe">
         <item name="cornerFamily">rounded</item> <!-- Tipo de esquina: redondeada -->
-        <item name="cornerSize">80dp</item> <!-- Tamaño del radio de las esquinas -->
+        <item name="cornerSize">75dp</item> <!-- Tamaño del radio de las esquinas -->
     </style>
 </resources>

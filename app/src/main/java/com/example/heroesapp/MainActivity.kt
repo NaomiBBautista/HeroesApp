@@ -57,16 +57,27 @@ class MainActivity : AppCompatActivity() {
             }
 
             // Verificar que el correo y contraseña coincidan con los almecenados
-            val isValidUser = User.staticUsers.any{ user-> user.email == email && user.password == password}
+            val isValidUser = User.staticUsers.any{
+                user-> user.email == email && user.password == password
+            }
             if(!isValidUser){
                 Log.i("ERROR", "El correo o la contraseña no son validos")
                 return@setOnClickListener
             }
 
+            // Traer datos del usuario verificando que no sea nulo
+            val user = User.staticUsers.firstOrNull {
+                it.email == email && it.password == password
+            }
+
+
             // Guardar el logueo
             val editor = sharedPreferences.edit()
             editor.putBoolean("isLogged", true)
             editor.apply()
+
+            // Traer el Usuario por su email
+            intent.putExtra("userEmail",user?.email)
 
             // Navegación a nueva ventana
             startActivity(intent)
