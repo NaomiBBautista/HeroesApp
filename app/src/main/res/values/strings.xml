@@ -7,4 +7,5 @@
     <string name="username">Hola, Heroe</string>
     <string name="titlePublisher"> Selecciona tu Universo:</string>
     <string name="titlePersonajes">Personajes</string>
+    <string name="nameHeroe"> Nombre del personaje</string>
 </resources>

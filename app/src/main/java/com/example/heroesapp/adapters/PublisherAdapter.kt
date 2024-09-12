@@ -1,5 +1,6 @@
 package com.example.heroesapp.adapters
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,7 +11,7 @@ import com.example.heroesapp.R
 import com.example.heroesapp.models.Publisher
 import com.squareup.picasso.Picasso
 
-class PublisherAdapter(val publisher: List<Publisher>)
+class PublisherAdapter(val publisher: List<Publisher>, val onClick: (Publisher) -> Unit)
     : RecyclerView.Adapter<PublisherViewHolder>()
 {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PublisherViewHolder {
@@ -28,6 +29,9 @@ class PublisherAdapter(val publisher: List<Publisher>)
     override fun onBindViewHolder(holder: PublisherViewHolder, position: Int) {
         val publisher = publisher[position]
         Picasso.get().load(publisher.image).into(holder.publisherImage)
+        holder.itemView.setOnClickListener{
+            onClick(publisher)
+        }
     }
 
 }

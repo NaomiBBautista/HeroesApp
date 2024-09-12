@@ -2,6 +2,7 @@ package com.example.heroesapp.ui
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
@@ -26,6 +27,7 @@ class PublisherActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_publisher)
 
+        // Prefencias de Login
         val sharedPreferences = getSharedPreferences("mypref", MODE_PRIVATE)
 
         // Buscar elemtos por ID
@@ -34,7 +36,13 @@ class PublisherActivity : AppCompatActivity() {
         publisherRecyclerView = findViewById(R.id.publisher_recyclerView)
 
         // Conectar el adaptador
-        publisherRecyclerView.adapter = PublisherAdapter(Publisher.publishers)
+        publisherRecyclerView.adapter = PublisherAdapter(Publisher.publishers){ publisher ->
+            Log.i("PublisherActivity", publisher.name)
+            val intent = Intent(this@PublisherActivity, HeroesActivity::class.java).apply {
+                putExtra("PublisherId", publisher.id)
+            }
+            startActivity(intent)
+        }
 
         // Definir como queremos que se muestre
         publisherRecyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)

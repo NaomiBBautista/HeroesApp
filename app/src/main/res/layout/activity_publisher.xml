@@ -36,7 +36,7 @@
             android:layout_width="36dp"
             android:layout_height="36dp"
             android:src="@drawable/heroe"
-            app:tint="@color/white"/>
+            app:tint="@color/white" />
 
         <TextView
             android:id="@+id/username"
