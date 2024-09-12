@@ -66,14 +66,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/titlePersonajes"
-        android:textSize="22dp"
+        android:textSize="30dp"
         android:textStyle="bold"
         app:layout_constraintTop_toBottomOf="@+id/header"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        android:layout_margin="20dp"
         />
 
     <androidx.recyclerview.widget.RecyclerView
@@ -86,6 +85,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintVertical_bias="0.1"
         app:layout_constraintHorizontal_bias="1.0"
-        android:layout_marginTop="40dp"/>
+        android:layout_marginTop="10dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

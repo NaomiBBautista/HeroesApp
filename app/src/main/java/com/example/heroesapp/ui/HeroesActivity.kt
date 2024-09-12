@@ -9,6 +9,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.heroesapp.MainActivity
@@ -31,7 +32,6 @@ class HeroesActivity : AppCompatActivity() {
 
         // Recuperar el nombre del usuario
         val userName = intent.getStringExtra("userName")
-        heroeTitle = findViewById(R.id.titleHeroe)
         Log.i("HeroesActivity","Nombre del usuario: $userName")
         heroename = findViewById(R.id.username)
         heroename.text = userName
@@ -47,14 +47,21 @@ class HeroesActivity : AppCompatActivity() {
         // Cargar la vista
         heroeRecyclerView = findViewById(R.id.heroe_recyclerView)
 
+        // Nombre del Publisher
+        heroeTitle = findViewById(R.id.titleHeroe)
+        heroeTitle.text = publisher?.name
+
         // Preferencias de login
         val sharedPreferences = getSharedPreferences("mypref", MODE_PRIVATE)
         logoutBtn = findViewById(R.id.logoutBtn)
 
+        // Filtrar Heroes por PublisherId
+        val heroes = Heroe.heroes.filter { it.publisherId == publisherId }
+
         // Conectar el adaptador
-        heroeRecyclerView.adapter = HeroeAdapter(Heroe.heroes)
+        heroeRecyclerView.adapter = HeroeAdapter(heroes)
         // Definir como queremos que se muestre
-        heroeRecyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
+        heroeRecyclerView.layoutManager = GridLayoutManager(this, 2)
 
 
         // Salir del inicio de sesión
