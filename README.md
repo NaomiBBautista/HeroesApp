@@ -9,20 +9,14 @@ HeroesApp es una aplicación móvil diseñada para aficionados de los cómics, q
 - Validar el email introducido por el usuario.
 - Si la autenticación es exitosa, navegar al PublisherActivity y guardar una bandera isLogged en SharedPreferences.
 - Si la aplicacion se cierra y se vuelve a abrir debe respetar el isLogged del usuario.
-
-<div align="center">
-    <img src="\app\src\main\res\drawable\homeActivity.png" alt="Home Activity" />
-</div>
+<img src="\app\src\main\res\drawable\homeActivity.png" alt="Home Activity" />
 
 ##### PublisherActivity
 - Mostrar una lista de los publisher Marvel y DC utilizando un RecyclerView y su adaptador correspondiente.
 - Crear una clase Publisher con propiedades id, name, e image (URL como String para cargar con Picasso).
 - Al seleccionar Marvel o DC, navegar a HeroesActivity pasando el id del publisher seleccionado.
 - Boton para cerrar sesion.
-
-<div align="center">
-    <img src="\app\src\main\res\drawable\publisherActivity.png" alt="Publisher Activity" />
-</div>
+<img src="\app\src\main\res\drawable\publisherActivity.png" alt="Publisher Activity" />
 
 ##### HeroesActivity
 - Mostrar una lista de héroes del publisher seleccionado (Marvel o DC), utilizando un RecyclerView.
@@ -31,10 +25,8 @@ HeroesApp es una aplicación móvil diseñada para aficionados de los cómics, q
 - Se evaluará el diseño y la creatividad del alumno en la interfaz de usuario.
 - La funcionalidad de la aplicación debe ser completa y sin errores.
 
-<div align="center">
-    <img src="\app\src\main\res\drawable\heroeMarvel.png" alt="Heroe Activity - MARVEL" />
-</div>
+Mundo MARVEL :
+<img src="\app\src\main\res\drawable\heroeMarvel.png" alt="Heroe Activity - MARVEL" />
 
-<div align="center">
-    <img src="\app\src\main\res\drawable\heroeDC.png" alt="Heroe Activity - DC" />
-</div>
+Mundo DC:
+<img src="\app\src\main\res\drawable\heroeDC.png" alt="Heroe Activity - DC" />
